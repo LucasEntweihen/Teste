@@ -1,0 +1,35 @@
+* {
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-color: gray;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: black;
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid>div:nth-child(n + 1){
+    background-color: blueviolet;
+    grid-column:span 2;
+    padding: 20px;
+}
+.grid>div:nth-child(3),
+.grid>div:nth-child(4){
+    background-color: aqua;
+    color: black;
+    grid-column: span 2;
+}
+.grid>div:nth-child(5),
+.grid>div:nth-child(6),
+.grid>div:nth-child(7){
+    background-color: rgb(85, 255, 0);
+    grid-column: 2 / span 2;
+    color: black;
+}
